@@ -18,7 +18,7 @@ public class MyBootstrapperImpl implements Bootstrapper {
 
     @Override
     public void onBootstrap() {
-
+        setUpPolymer();
     }
 
     private void setUpPolymer() {
