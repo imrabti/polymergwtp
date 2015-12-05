@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.gwtplatform.dispatch.rest.DispatchRest'/>
+    <inherits name='com.google.gwt.query.Query'/>
+    <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint'/>
+    <inherits name="com.vaadin.polymer.Elements"/>
+
+    <source path="client"/>
+    <source path="shared"/>
+
+    <!-- Enable Gss with CssResource -->
+    <set-configuration-property name="CssResource.conversionMode" value="strict" />
+
+    <extend-configuration-property name="gin.ginjector.modules" value="org.nuvola.polymergwtp.client.MyModule"/>
+    <set-configuration-property name="gwtp.bootstrapper" value="org.nuvola.polymergwtp.client.MyBootstrapperImpl"/>
+</module>
