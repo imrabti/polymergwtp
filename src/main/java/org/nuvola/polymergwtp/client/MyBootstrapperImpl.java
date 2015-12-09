@@ -3,7 +3,6 @@ package org.nuvola.polymergwtp.client;
 import com.gwtplatform.mvp.client.Bootstrapper;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.vaadin.polymer.Polymer;
-import com.vaadin.polymer.elemental.Function;
 
 import javax.inject.Inject;
 import java.util.Arrays;
@@ -35,7 +34,7 @@ public class MyBootstrapperImpl implements Bootstrapper {
                 "iron-flex-layout/iron-flex-layout.html"
         ));
 
-        Polymer.whenReady((Function) o -> {
+        Polymer.whenReady(o -> {
             placeManager.revealDefaultPlace();
             return null;
         });

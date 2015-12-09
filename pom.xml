@@ -14,7 +14,7 @@
         <gwtp.version>1.6-SNAPSHOT</gwtp.version>
         <gwtquery.version>1.4.4-SNAPSHOT</gwtquery.version>
         <gwt-jackson.version>0.11.0</gwt-jackson.version>
-        <gwt-polymer.version>1.2.1.0</gwt-polymer.version>
+        <gwt-polymer.version>1.2.1.1-SNAPSHOT</gwt-polymer.version>
 
         <!--Plugin versions-->
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
@@ -144,10 +144,6 @@
                     <logLevel>INFO</logLevel>
                     <localWorkers>2</localWorkers>
                     <optimize>9</optimize>
-                    <compilerArgs>
-                        <compileArg>-XjsInteropMode</compileArg>
-                        <compileArg>JS</compileArg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
