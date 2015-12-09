@@ -21,6 +21,8 @@ public class MyModule extends AbstractGinModule {
         bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.getHome());
         bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.getHome());
 
+        bind(PolymerLoader.class).asEagerSingleton();
+
         install(defaultModule);
         install(new ApplicationModule());
     }

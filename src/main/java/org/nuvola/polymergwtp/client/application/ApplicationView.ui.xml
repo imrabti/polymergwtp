@@ -2,11 +2,26 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
              xmlns:i='urn:import:com.vaadin.polymer.iron.widget'>
+
+    <ui:style>
+        .toolbar {
+            background: #4285f4 !important;
+        }
+        .header {
+            font-size: 200%;
+            margin-left: 50px;
+            background: #4285f4 !important;
+        }
+        .content {
+            padding: 15px;
+        }
+    </ui:style>
+
     <g:HTMLPanel>
         <p:PaperDrawerPanel ui:field="main">
             <div drawer="">
                 <p:PaperHeaderPanel mode="seamed">
-                    <p:PaperToolbar/>
+                    <p:PaperToolbar style="{style.toolbar}"/>
                     <p:PaperIconItem ui:field="menuClearAll">
                         <i:IronIcon icon="delete"/>
                         <div>Clear All</div>
@@ -36,6 +51,9 @@
                                            attributes="paper-drawer-toggle"/>
                         <span>Todo List</span>
                     </p:PaperToolbar>
+
+                    <g:HTMLPanel ui:field="content"
+                                 addStyleNames="vertical center-justified layout" />
                 </p:PaperHeaderPanel>
             </div>
         </p:PaperDrawerPanel>
