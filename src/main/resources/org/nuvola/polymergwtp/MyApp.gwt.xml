@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to="MyApp">
     <inherits name='com.google.gwt.user.User'/>
-    <inherits name='com.gwtplatform.dispatch.rest.DispatchRest'/>
-    <inherits name='com.google.gwt.query.Query'/>
     <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint'/>
     <inherits name="com.vaadin.polymer.Elements"/>
 
