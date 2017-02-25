@@ -11,7 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
         <gwt.version>2.8.0</gwt.version>
-        <gwtp.version>1.5.3</gwtp.version>
+        <gwtp.version>1.6</gwtp.version>
         <gwt-polymer.version>1.7.0.0</gwt-polymer.version>
 
         <!--Plugin versions-->
