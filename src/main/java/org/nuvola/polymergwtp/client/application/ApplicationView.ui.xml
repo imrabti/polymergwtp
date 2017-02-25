@@ -1,89 +1,35 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
-             xmlns:p='urn:import:com.vaadin.polymer.paper.widget'
-             xmlns:i='urn:import:com.vaadin.polymer.iron.widget'>
-
+             xmlns:p='urn:import:com.vaadin.polymer.paper.widget'>
     <ui:style>
-        .toolbar {
-            background: #4285f4 !important;
-        }
-        .header {
-            font-size: 200%;
-            margin-left: 50px;
-            background: #4285f4 !important;
-        }
-        .content {
-            padding: 15px;
-            background-color: #fafafa;
+        .mainContent {
+            background-color: #efefef;
         }
     </ui:style>
 
     <g:HTMLPanel>
-        <p:PaperDialog ui:field="addItemDialog"
-                       entryAnimation="fade-in-animation"
-                       exitAnimation="fade-out-animation"
-                       modal="true">
-            <h2>Add Item</h2>
-            <p:PaperInput ui:field="titleInput" label="Title" required="true"
-                          autoValidate="true" errorMessage="required input!"/>
-            <div class="textarea-container iron-autogrow-textarea">
-                <p:PaperTextarea ui:field="descriptionInput" label="Notes"/>
-            </div>
-            <div class="buttons">
-                <p:PaperButton attributes="dialog-dismiss">Cancel</p:PaperButton>
-                <p:PaperButton ui:field="confirmAddButton"
-                               attributes="dialog-confirm">OK</p:PaperButton>
-            </div>
-        </p:PaperDialog>
-
-        <style is='custom-style'>
-            .add {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            --paper-fab-background: var(--paper-red-500);
-            }
-        </style>
-
-        <p:PaperDrawerPanel ui:field="main">
+        <p:PaperDrawerPanel ui:field="drawerPanel">
             <div drawer="">
-                <p:PaperHeaderPanel mode="seamed">
-                    <p:PaperToolbar styleName="{style.toolbar}"/>
-                    <p:PaperIconItem ui:field="menuClearAll">
-                        <i:IronIcon icon="delete"/>
-                        <div>Clear All</div>
-                        <p:PaperRipple/>
-                    </p:PaperIconItem>
-                    <p:PaperIconItem ui:field="menuClearDone">
-                        <i:IronIcon icon="clear"/>
-                        <div>Clear Done</div>
-                        <p:PaperRipple/>
-                    </p:PaperIconItem>
-                    <p:PaperIconItem ui:field="menuSettings">
-                        <i:IronIcon icon="settings"/>
-                        <div>Settings</div>
-                        <p:PaperRipple/>
-                    </p:PaperIconItem>
-                    <p:PaperIconItem ui:field="menuAbout">
-                        <i:IronIcon icon="help"/>
-                        <div>About</div>
-                        <p:PaperRipple/>
-                    </p:PaperIconItem>
-                </p:PaperHeaderPanel>
-            </div>
-            <div main="">
-                <p:PaperHeaderPanel mode="seamed">
-                    <p:PaperToolbar styleName="{style.toolbar}">
-                        <p:PaperIconButton ui:field="menu" icon="more-vert"
-                                           attributes="paper-drawer-toggle"/>
-                        <span class="{style.header}">Todo List</span>
+                <p:PaperHeaderPanel>
+                    <p:PaperToolbar>
+                        <p:PaperItem>GWT Polymer</p:PaperItem>
                     </p:PaperToolbar>
 
-                    <g:HTMLPanel ui:field="content" styleName="{style.content}"
-                                 addStyleNames="vertical center-justified layout" />
+                    <p:PaperMenu>
+                        <p:PaperItem ui:field="registration">Registration</p:PaperItem>
+                        <p:PaperItem>Status</p:PaperItem>
+                        <p:PaperItem>Settings</p:PaperItem>
+                    </p:PaperMenu>
+                </p:PaperHeaderPanel>
+            </div>
 
-                    <p:PaperFab ui:field="addButton" icon="add"
-                                addStyleNames="add"/>
+            <div main="">
+                <p:PaperHeaderPanel>
+                    <p:PaperToolbar>
+                        <p:PaperIconButton icon="menu" attributes="paper-drawer-toggle"/>
+                        <p:PaperItem>Here title...</p:PaperItem>
+                    </p:PaperToolbar>
+                    <g:HTMLPanel ui:field="content" styleName="{style.mainContent} fit"/>
                 </p:PaperHeaderPanel>
             </div>
         </p:PaperDrawerPanel>
